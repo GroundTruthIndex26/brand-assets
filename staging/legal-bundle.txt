@@ -1,0 +1,2332 @@
+
+===FILE:src/routes/terms.tsx===
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { buildPageHead } from "@/lib/seo";
+import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+
+export const Route = createFileRoute("/terms")({
+  head: () =>
+    buildPageHead({
+      path: "/terms",
+      title: "Terms of Service | AI Job Risk Check",
+      description:
+        "The terms governing your use of AI Job Risk Check, a product of Phronesis Labs, LLC.",
+      breadcrumbs: [
+        { name: "Home", path: "/" },
+        { name: "Terms of Service", path: "/terms" },
+      ],
+    }),
+  component: Terms,
+});
+
+const TEAL = "#0A6B70";
+const SOFT = "#FAFAF8";
+const CHARCOAL = "#1B1B1B";
+const DISPLAY = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
+const SANS = "Inter, ui-sans-serif, system-ui, sans-serif";
+
+function Terms() {
+  return (
+    <div style={{ minHeight: "100vh", backgroundColor: SOFT, display: "flex", flexDirection: "column" }}>
+      <style>{`
+        .ajrc-terms a { color: ${TEAL}; text-decoration: underline; }
+        .ajrc-terms a:hover { opacity: 0.8; }
+        .ajrc-terms h1 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 2.5rem; line-height: 1.2; margin: 0 0 1rem; letter-spacing: -0.01em; }
+        .ajrc-terms h2 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 1.5rem; line-height: 1.3; margin: 2.5rem 0 1rem; letter-spacing: -0.01em; }
+        .ajrc-terms h3 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 1.25rem; line-height: 1.3; margin: 2rem 0 0.75rem; }
+        .ajrc-terms p, .ajrc-terms li { font-family: ${SANS}; color: ${CHARCOAL}; font-size: 1rem; line-height: 1.7; }
+        .ajrc-terms p { margin: 0 0 1rem; }
+        .ajrc-terms ul { margin: 0 0 1.25rem; padding-left: 1.5rem; }
+        .ajrc-terms li { margin-bottom: 0.5rem; }
+        .ajrc-terms strong { font-weight: 700; color: ${CHARCOAL}; }
+        .ajrc-terms .lastupdated { color: ${CHARCOAL}; opacity: 0.7; font-style: normal; margin-bottom: 2rem; }
+      `}</style>
+
+      <header style={{ backgroundColor: TEAL, padding: "24px 16px", textAlign: "center" }}>
+        <Link to="/" aria-label="AI Job Risk Check, home">
+          <img
+            src="/logo-stacked.png"
+            alt="AI Job Risk Check"
+            style={{ width: "min(70vw, 320px)", height: "auto", display: "inline-block" }}
+          />
+        </Link>
+      </header>
+
+      <main className="ajrc-terms" style={{ flex: 1, maxWidth: 720, width: "100%", margin: "0 auto", padding: "48px 24px 64px", boxSizing: "border-box" }}>
+        <Breadcrumbs
+          items={[
+            { name: "Home", path: "/" },
+            { name: "Terms of Service", path: "/terms" },
+          ]}
+          variant="light"
+        />
+        <h1>Terms of Service</h1>
+        <p className="lastupdated"><strong>Last updated: July 28, 2026</strong></p>
+
+        <p>
+          AI Job Risk Check is a product of <a href="https://phronesislabs.net" target="_blank" rel="noopener noreferrer">Phronesis Labs, LLC</a> ("we," "us," "our"). These Terms of Service govern your use of our website and services. By using AI Job Risk Check, you agree to these terms.
+        </p>
+        <p>We tried to write these in plain English. If anything is unclear, email us.</p>
+
+        <h2>What You Get</h2>
+        <p>AI Job Risk Check is offered at a one-time price of $29.99, which includes your first month of coaching. For that one-time payment you receive: an AI Job Risk Score for your current role, a Report explaining what AI can do now and on what timeline for your specific tasks, a Profile mapping your job to standardized occupation data, a Plan with concrete actions you can take to protect and advance your career, and your first month of coaching, delivered by text. These are delivered immediately after payment, except coaching, which we begin by reaching out to you by text. Continuing coaching after the first month is optional, never automatic, and is described under Payment below.</p>
+
+        <h2>What This Service Is (And Isn't)</h2>
+        <p>AI Job Risk Check is a research-informed career assessment tool. It uses publicly available occupational data and current research on AI capabilities to estimate how your specific job tasks may be affected by AI over time.</p>
+        <p><strong>It is not professional career counseling, financial advice, or legal advice.</strong> It is not a guarantee of your job's future. It does not predict whether you personally will be laid off, promoted, or otherwise affected by AI in your specific workplace.</p>
+        <p>If you are making major career or financial decisions, we encourage you to consult a qualified career counselor, financial advisor, or other licensed professional.</p>
+
+        <h2>Using the Service</h2>
+        <p>AI Job Risk Check does not require you to create an account or password. To use it, you complete a short assessment, and to unlock the full Report you provide an email address and phone number and pay. By using the service, you confirm that you are at least 18 years old, that the information you provide is accurate to the best of your knowledge, and that you are using the service for yourself, not on behalf of someone else without their permission.</p>
+
+        <h2>Text Message Coaching</h2>
+        <p>Your first month of coaching is delivered by text message. Before payment you give us your mobile number and agree to receive coaching texts. Agreeing is how we deliver the coaching you are buying, so it is part of the purchase rather than a separate marketing list.</p>
+        <p>What we send: one-to-one coaching messages from a real person, including an introduction, a walk through your plan, and check-ins on your progress. You can reply and get a reply back. We do not send promotional texts. Any offer we make comes by email.</p>
+        <p>Message frequency varies, up to 10 messages per month. Msg & data rates may apply. Your mobile carrier is not liable for delayed or undelivered messages.</p>
+        <p>Reply STOP to any message to stop receiving texts. Reply HELP for contact information. You can also cancel the optional coaching subscription by replying to any coaching text, as described under Payment.</p>
+        <p>Stopping texts does not affect your Score, Report, Profile, or Plan, which remain yours. If you want coaching but would rather not receive it by text, email <a href="mailto:customersupport@aijobriskcheck.com">customersupport@aijobriskcheck.com</a> and we will work out something that fits.</p>
+        <p>For how we store your number and who processes it, see our <Link to="/privacy">Privacy Policy</Link>.</p>
+
+        <h2>Payment</h2>
+        <p>One-time purchase. The full Score, Report, Profile, and Plan, including your first month of coaching, is a one-time payment of $29.99. Payment is processed by Stripe. This is the only charge you pay unless you later choose to start a coaching subscription.</p>
+        <p>Your included first month does not turn into a subscription. When your included first month of coaching ends, nothing renews and nothing is charged. Making your one-time purchase does not enroll you in any recurring plan. You will never be billed again unless you actively choose to start the optional monthly coaching subscription described below.</p>
+        <p>Continuing coaching subscription (optional). If you want coaching to continue after your included first month, you can choose to start a monthly subscription. It is entirely optional and never starts automatically. It begins only when you actively sign up for it. Coaching continues at $12.99 per month. Once you start it, the subscription bills monthly to your payment method and renews automatically each month until you cancel.</p>
+        <p>Cancelling. You can cancel the coaching subscription at any time by emailing <a href="mailto:contact@aijobriskcheck.com">contact@aijobriskcheck.com</a> or by replying to any coaching text. We will cancel it before your next billing date so you are not charged again. Cancelling stops future charges. Coaching works the same way as your one-time purchase: any coaching charge is fully refundable, no questions asked, within 14 days of that charge, even if the month has already begun. See our <a href="/refunds">Refund Policy</a> for details.</p>
+        <p>If your payment fails or is reversed (chargeback, fraud claim, or similar), we may suspend your access until the matter is resolved.</p>
+
+        <h2>Refunds</h2>
+        <p>We offer a full 14-day money-back guarantee, no questions asked, on every payment you make to us. If you are not satisfied with your AI Job Risk Score, Report, Profile, Plan, or any month of coaching for any reason, email us within 14 days of that charge and we will refund it in full. You do not need to give a reason. This covers your one-time purchase and every coaching subscription charge, even if the month has already begun.</p>
+        <p>After 14 days from a charge, refunds are at our discretion and not guaranteed.</p>
+        <p>For complete refund details, see our <a href="/refunds">Refund Policy</a>.</p>
+
+        <h2>Acceptable Use</h2>
+        <p>When you use AI Job Risk Check, you agree not to:</p>
+        <ul>
+          <li>Use the service for any unlawful purpose</li>
+          <li>Attempt to gain unauthorized access to our systems</li>
+          <li>Scrape, copy, or republish our content without permission</li>
+          <li>Use automated tools to interact with our service in ways that disrupt it</li>
+          <li>Resell, redistribute, or use our content for commercial purposes without written permission</li>
+          
+          <li>Impersonate someone else when using the service</li>
+        </ul>
+        <p>We may suspend or terminate your access if you violate these terms.</p>
+
+        <h2>Our Content</h2>
+        <p>The text, design, logos, methodology, and Reports generated by AI Job Risk Check are our intellectual property or that of our service providers. You may use your individual Report for your own personal career planning. You may not republish, resell, or use it for commercial purposes without our written permission.</p>
+        <p>You retain ownership of the information you provide to us (your job title, description, and task ratings). We have a limited license to use that information solely to deliver the service you paid for, as described in our <Link to="/privacy">Privacy Policy</Link>.</p>
+
+        <h2>Service Availability</h2>
+        <p>We try to keep AI Job Risk Check available 24/7, but we cannot guarantee uninterrupted service. We may experience downtime for maintenance, updates, or unexpected technical issues. We are not liable for losses resulting from service interruptions.</p>
+        <p>If we discontinue the service entirely, we will give you reasonable notice and offer a full refund to anyone who has paid in the last 14 days.</p>
+
+        <h2>Disclaimers and Limitations</h2>
+        <p>For our full disclaimers about the accuracy and use of our Reports, see our <a href="/disclaimer">Disclaimer</a>.</p>
+        <p>To the maximum extent permitted by law, AI Job Risk Check and Phronesis Labs, LLC will not be liable for any indirect, incidental, special, consequential, or punitive damages, including lost income, lost opportunities, or career outcomes that result from your use of our service.</p>
+        <p>Our total liability to you for any claim related to this service will not exceed the total amount you paid us in the twelve months before the claim.</p>
+
+        <h2>Changes to These Terms</h2>
+        <p>We may update these terms. If we make material changes, we will update the "Last updated" date and email users who have given us an email address before the changes take effect. Continued use of the service after the change means you accept the new terms.</p>
+
+        <h2>Governing Law</h2>
+        <p>These terms are governed by the laws of the State of North Carolina, United States, without regard to its conflict of law principles. Any dispute will be resolved in the state or federal courts located in North Carolina.</p>
+
+        <h2>Ending Your Relationship With Us</h2>
+        <p>You can stop using AI Job Risk Check at any time. To delete your data, see our <Link to="/privacy">Privacy Policy</Link> or email us.</p>
+        <p>We may terminate your access for violating these terms or for reasons described in our Refund Policy.</p>
+
+        <h2>Questions</h2>
+        <p>If you have any questions about these terms, email us at <a href="mailto:contact@aijobriskcheck.com">contact@aijobriskcheck.com</a>.</p>
+        <p>AI Job Risk Check is a product of <a href="https://phronesislabs.net" target="_blank" rel="noopener noreferrer">Phronesis Labs, LLC</a>, registered in North Carolina, United States.</p>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+===FILE:src/routes/privacy.tsx===
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { buildPageHead } from "@/lib/seo";
+import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+
+export const Route = createFileRoute("/privacy")({
+  head: () =>
+    buildPageHead({
+      path: "/privacy",
+      title: "Privacy Policy | AI Job Risk Check",
+      description:
+        "How AI Job Risk Check collects, uses, and protects your data. We never sell or share your data with third parties.",
+      breadcrumbs: [
+        { name: "Home", path: "/" },
+        { name: "Privacy Policy", path: "/privacy" },
+      ],
+    }),
+  component: Privacy,
+});
+
+const TEAL = "#0A6B70";
+const SOFT = "#FAFAF8";
+const CHARCOAL = "#1B1B1B";
+const DISPLAY = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
+const SANS = "Inter, ui-sans-serif, system-ui, sans-serif";
+
+function Privacy() {
+  return (
+    <div style={{ minHeight: "100vh", backgroundColor: SOFT, display: "flex", flexDirection: "column" }}>
+      <style>{`
+        .ajrc-privacy a { color: ${TEAL}; text-decoration: underline; }
+        .ajrc-privacy a:hover { opacity: 0.8; }
+        .ajrc-privacy h1 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 2.5rem; line-height: 1.2; margin: 0 0 1rem; letter-spacing: -0.01em; }
+        .ajrc-privacy h2 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 1.5rem; line-height: 1.3; margin: 2.5rem 0 1rem; letter-spacing: -0.01em; }
+        .ajrc-privacy h3 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 1.25rem; line-height: 1.3; margin: 2rem 0 0.75rem; }
+        .ajrc-privacy p, .ajrc-privacy li { font-family: ${SANS}; color: ${CHARCOAL}; font-size: 1rem; line-height: 1.7; }
+        .ajrc-privacy p { margin: 0 0 1rem; }
+        .ajrc-privacy ul { margin: 0 0 1.25rem; padding-left: 1.5rem; }
+        .ajrc-privacy li { margin-bottom: 0.5rem; }
+        .ajrc-privacy strong { font-weight: 700; color: ${CHARCOAL}; }
+        .ajrc-privacy .lastupdated { color: ${CHARCOAL}; opacity: 0.7; font-style: normal; margin-bottom: 2rem; }
+      `}</style>
+
+      <header style={{ backgroundColor: TEAL, padding: "24px 16px", textAlign: "center" }}>
+        <Link to="/" aria-label="AI Job Risk Check, home">
+          <img
+            src="/logo-stacked.png"
+            alt="AI Job Risk Check"
+            style={{ width: "min(70vw, 320px)", height: "auto", display: "inline-block" }}
+          />
+        </Link>
+      </header>
+
+      <main className="ajrc-privacy" style={{ flex: 1, maxWidth: 720, width: "100%", margin: "0 auto", padding: "48px 24px 64px", boxSizing: "border-box" }}>
+        <Breadcrumbs
+          items={[
+            { name: "Home", path: "/" },
+            { name: "Privacy Policy", path: "/privacy" },
+          ]}
+          variant="light"
+        />
+        <h1>Privacy Policy</h1>
+        <p className="lastupdated"><strong>Last updated: July 28, 2026</strong></p>
+
+        <p>
+          AI Job Risk Check is a product of <a href="https://phronesislabs.net" target="_blank" rel="noopener noreferrer">Phronesis Labs, LLC</a> ("we," "us," "our"). This Privacy Policy explains what data we collect, why we collect it, and what rights you have over it.
+        </p>
+        <p>We wrote this policy to be read, not skimmed. It's short on purpose.</p>
+
+        <h2>Our Core Privacy Promise</h2>
+        <p>
+          <strong>We believe in your right to privacy and your right to your own data. We will never sell or share your data with a third party.</strong> You have the right to request your own data for as long as we have it. You also have the right to delete it at any time.
+        </p>
+        <p>That's the part that matters most. The rest of this document explains how we live up to it.</p>
+
+        <h2>What We Collect</h2>
+        <p>When you use AI Job Risk Check, operated by Phronesis Labs LLC, we collect only what's needed to produce your results:</p>
+        <ul>
+          <li><strong>Your email address</strong>, if you choose to give it to us. You can add it to join the waitlist for what we're building next, and you'll enter one at checkout if you buy a report. You can get your free Score without giving us an email at all.</li>
+          <li><strong>Your mobile phone number if you buy a report.</strong> Your purchase includes your first month of coaching, and coaching is done by text. We share your number with Twilio, our text message provider. You can opt out of texts at any time by replying STOP.</li>
+          <li><strong>Your job title</strong>, the title you type or tap from our list. If your role isn't listed and you choose to describe it instead, we collect that short description.</li>
+          <li><strong>The occupation we match you to</strong>, the standardized occupation your title maps to, and how confident that match is. We use a government occupation code behind the scenes but never show it to you.</li>
+          <li><strong>Your task ratings</strong>, how much time you tell us you spend on each task we show you, and whether you mostly do the work yourself or manage people who do it.</li>
+          <li><strong>Your results</strong>, the AI Job Risk Score, Report, Profile, and Plan we generate for you.</li>
+          <li><strong>Payment information</strong>, handled entirely by Stripe, our payment processor. We never see or store your card number; Stripe handles that under its own terms.</li>
+        </ul>
+        
+
+        <h2>Why We Collect It</h2>
+        <p>We use your data to:</p>
+        <ul>
+          <li>Generate your AI Job Risk Score, Report, Profile, and Plan</li>
+          <li>Send you the deliverables you paid for</li>
+          <li>Respond to customer support inquiries</li>
+          <li>Improve the accuracy of our matching and scoring (using aggregated, de-identified patterns, never your individual data tied to you)</li>
+        </ul>
+        <p>That's it. We do not use your data for advertising, profiling, training models for resale, or any purpose unrelated to delivering the service you paid for.</p>
+
+        <h2>Who We Share It With</h2>
+        <p>Short answer: nobody, except the service providers we need to operate.</p>
+        <p>The companies that help us run AI Job Risk Check have access to limited data only to do their job:</p>
+        <ul>
+          <li><strong>Stripe</strong> handles payment processing</li>
+          <li><strong>Anthropic</strong> processes your job description and task ratings to generate your Report and Plan. We never send your email address or phone number to Anthropic.</li>
+          <li><strong>Supabase</strong> stores your data securely</li>
+          <li><strong>Twilio</strong> delivers coaching text messages</li>
+        </ul>
+        <p>Each of these providers has their own privacy commitments and contractual obligations to us. None of them will sell your data either, and we don't share it with anyone outside this list.</p>
+        <p>We will never sell your data. We will never give it to data brokers. We will never share it with advertisers. We will never trade it. If we are ever acquired or merged into another company, your data rights as described in this policy will transfer with the acquisition, and we will notify you in advance of any material change.</p>
+
+        <h2>Text Message Coaching</h2>
+        <p>If you buy the AI Job Risk Report, your purchase includes your first month of coaching, delivered by text message. Here is exactly how that works.</p>
+        <p><strong>You opt in yourself.</strong> Before payment you enter your mobile number and check a box agreeing to receive coaching texts. The box is not pre-checked. Coaching is delivered by text, so this is how we deliver what you bought. We keep a record of the consent wording you agreed to and the date and time you agreed to it.</p>
+        <p><strong>What we send.</strong> One-to-one coaching messages from a real person: an introduction, a walk through your plan, and check-ins on your progress. You can reply to any message and get a reply back. We do not send promotional texts. If we offer you anything, it comes by email.</p>
+        <p><strong>How often.</strong> Message frequency varies, up to 10 messages per month. Msg & data rates may apply.</p>
+        <p><strong>How to stop.</strong> Reply STOP to any message and we will stop immediately. Reply HELP for contact information. Your Report and Plan are yours to keep either way. If you want coaching but would rather not do it by text, email <a href="mailto:customersupport@aijobriskcheck.com">customersupport@aijobriskcheck.com</a> and we will work out something that fits.</p>
+        <p><strong>Who sees your number.</strong> We use Twilio to send and receive these messages, so Twilio processes your number and message content on our behalf. Nobody else. We do not sell, rent, or share your mobile number or your consent to receive texts with anyone, for any purpose, ever. This includes affiliates, advertisers, and data brokers. Your opt-in is ours to honor, not ours to pass along.</p>
+
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li><strong>Request a copy of your data</strong> at any time, for as long as we have it. Email us and we will send you everything we have about you within 30 days.</li>
+          <li><strong>Correct your data</strong> if any of it is wrong.</li>
+          <li><strong>Delete your data</strong> at any time. Email us and we will delete your account and all associated data within 30 days. Some information may remain in backup systems for a short additional period before being permanently purged.</li>
+          <li><strong>Opt out of future communications.</strong> For texts, reply STOP to any message. For email, reply to any email we send you or email us directly.</li>
+        </ul>
+        <p>If you are a resident of California, the European Union, the United Kingdom, or another jurisdiction with specific privacy laws, you may have additional rights. Email us and we will honor them.</p>
+
+        <h2>How Long We Keep It</h2>
+        <p>We keep your data as long as you have an account with us or as long as you want us to keep it. There is no automatic expiration. If you want it deleted, ask us and we will delete it.</p>
+
+        <h2>Security</h2>
+        <p>We protect your data using industry-standard encryption in transit and at rest. We use trusted infrastructure providers (Supabase, Anthropic, Stripe) that maintain SOC 2 compliance or equivalent security standards. No system is perfectly secure, and we cannot guarantee absolute protection against every possible threat. If we ever experience a data breach that affects you, we will notify you as required by applicable law.</p>
+
+        <h2>Children</h2>
+        <p>AI Job Risk Check is not directed at children under 18. We do not knowingly collect data from anyone under 18. If you believe a minor has provided us with information, please email us and we will delete it.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>If we change this policy, we will update the "Last updated" date at the top and email registered users about material changes before they take effect. Minor wording clarifications may be made without notice.</p>
+
+        <h2>Questions</h2>
+        <p>If you have any questions about this policy or how we handle your data, email us at <a href="mailto:contact@aijobriskcheck.com">contact@aijobriskcheck.com</a>.</p>
+        <p>For the rest of the agreement that governs your purchase, see our <Link to="/terms">Terms of Service</Link> and <Link to="/refunds">Refund Policy</Link>.</p>
+        <p>AI Job Risk Check is a product of <a href="https://phronesislabs.net" target="_blank" rel="noopener noreferrer">Phronesis Labs, LLC</a>, registered in North Carolina, United States.</p>
+
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+===FILE:src/routes/disclaimer.tsx===
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { buildPageHead } from "@/lib/seo";
+import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+
+export const Route = createFileRoute("/disclaimer")({
+  head: () =>
+    buildPageHead({
+      path: "/disclaimer",
+      title: "Disclaimer | AI Job Risk Check",
+      description:
+        "What AI Job Risk Check is, what it isn't, and how to use the information in your Report.",
+      breadcrumbs: [
+        { name: "Home", path: "/" },
+        { name: "Disclaimer", path: "/disclaimer" },
+      ],
+    }),
+  component: Disclaimer,
+});
+
+const TEAL = "#0A6B70";
+const SOFT = "#FAFAF8";
+const CHARCOAL = "#1B1B1B";
+const DISPLAY = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
+const SANS = "Inter, ui-sans-serif, system-ui, sans-serif";
+
+function Disclaimer() {
+  return (
+    <div style={{ minHeight: "100vh", backgroundColor: SOFT, display: "flex", flexDirection: "column" }}>
+      <style>{`
+        .ajrc-disclaimer a { color: ${TEAL}; text-decoration: underline; }
+        .ajrc-disclaimer a:hover { opacity: 0.8; }
+        .ajrc-disclaimer h1 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 2.5rem; line-height: 1.2; margin: 0 0 1rem; letter-spacing: -0.01em; }
+        .ajrc-disclaimer h2 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 1.5rem; line-height: 1.3; margin: 2.5rem 0 1rem; letter-spacing: -0.01em; }
+        .ajrc-disclaimer h3 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 1.25rem; line-height: 1.3; margin: 2rem 0 0.75rem; }
+        .ajrc-disclaimer p, .ajrc-disclaimer li { font-family: ${SANS}; color: ${CHARCOAL}; font-size: 1rem; line-height: 1.7; }
+        .ajrc-disclaimer p { margin: 0 0 1rem; }
+        .ajrc-disclaimer ul { margin: 0 0 1.25rem; padding-left: 1.5rem; }
+        .ajrc-disclaimer li { margin-bottom: 0.5rem; }
+        .ajrc-disclaimer strong { font-weight: 700; color: ${CHARCOAL}; }
+        .ajrc-disclaimer .lastupdated { color: ${CHARCOAL}; opacity: 0.7; font-style: normal; margin-bottom: 2rem; }
+      `}</style>
+
+      <header style={{ backgroundColor: TEAL, padding: "24px 16px", textAlign: "center" }}>
+        <Link to="/" aria-label="AI Job Risk Check, home">
+          <img
+            src="/logo-stacked.png"
+            alt="AI Job Risk Check"
+            style={{ width: "min(70vw, 320px)", height: "auto", display: "inline-block" }}
+          />
+        </Link>
+      </header>
+
+      <main className="ajrc-disclaimer" style={{ flex: 1, maxWidth: 720, width: "100%", margin: "0 auto", padding: "48px 24px 64px", boxSizing: "border-box" }}>
+        <Breadcrumbs
+          items={[
+            { name: "Home", path: "/" },
+            { name: "Disclaimer", path: "/disclaimer" },
+          ]}
+          variant="light"
+        />
+        <h1>Disclaimer</h1>
+        <p className="lastupdated"><strong>Last updated: May 12, 2026</strong></p>
+
+        <p>AI Job Risk Check is a product of <a href="https://phronesislabs.net" target="_blank" rel="noopener noreferrer">Phronesis Labs, LLC</a>. This page explains what our service is, what it is not, and how you should use the information we provide.</p>
+        <p>Read this carefully before making any major decisions based on your Report.</p>
+
+        <h2>What AI Job Risk Check Is</h2>
+        <p>AI Job Risk Check is a research-informed career assessment tool. It uses:</p>
+        <ul>
+          <li>Publicly available occupational data from the U.S. Department of Labor's O*NET database</li>
+          <li>Current research on AI capabilities and adoption trends</li>
+          <li>The job description and task ratings you provide</li>
+        </ul>
+        <p>To produce:</p>
+        <ul>
+          <li>An estimate of how your specific job tasks may be affected by AI over time</li>
+          <li>A general timeline for when those changes may occur</li>
+          <li>Suggestions for actions you can take in response</li>
+        </ul>
+
+        <h2>What AI Job Risk Check Is Not</h2>
+        <p><strong>This is a research-informed estimate, not professional advice.</strong> Our Report is a starting point for your own thinking, not a final verdict on your career.</p>
+        <p><strong>It is not a guarantee.</strong> Predictions about AI capabilities and timelines are inherently uncertain. We make our best effort to provide accurate, current information, but the future cannot be predicted with certainty. Your actual experience may differ significantly from what your Report describes.</p>
+        <p><strong>Do not quit your job because of a single Report.</strong> No matter how high your AI Job Risk Score is, do not make impulsive career decisions based solely on our assessment. Major career decisions deserve careful thought, conversations with people who know your specific situation, and ideally input from a qualified career counselor.</p>
+        <p><strong>Talk to a real career counselor, financial advisor, or licensed professional for major decisions.</strong> We can help you think about your situation. We cannot replace personalized professional guidance from someone who knows you, your industry, your finances, and your goals.</p>
+
+        <h2>This Data Changes Over Time</h2>
+        <p>The AI landscape changes rapidly. Our Reports reflect current research and capabilities at the time you take the assessment. If you take the assessment again in a month, six months, or a year, <strong>your score and recommendations may be different</strong>, sometimes meaningfully different.</p>
+        <p>This is not a bug. It reflects the reality that:</p>
+        <ul>
+          <li>AI capabilities expand rapidly</li>
+          <li>Adoption patterns shift as new tools become available</li>
+          <li>Research on job displacement is constantly being updated</li>
+          <li>Your own role, tasks, or industry may evolve</li>
+        </ul>
+        <p>We recommend treating your Report as a snapshot in time, not a permanent assessment. Retaking the assessment periodically (every six to twelve months) is a reasonable way to stay current.</p>
+
+        <h2>What Your Score Actually Means</h2>
+        <p>Your AI Job Risk Score is a relative estimate of how exposed your current tasks are to current and near-future AI capabilities. It is influenced by:</p>
+        <ul>
+          <li>The specific tasks you described and rated</li>
+          <li>How well those tasks match what AI can do today and is likely to do soon</li>
+          <li>The general trajectory of AI adoption in your occupation</li>
+        </ul>
+        <p>It is <strong>not</strong> a prediction of:</p>
+        <ul>
+          <li>Whether you personally will be laid off</li>
+          <li>Whether you will be promoted</li>
+          <li>How your specific employer will respond to AI</li>
+          <li>What your industry will look like in 10 years</li>
+          <li>How your individual skills, relationships, or institutional knowledge will affect your job security</li>
+        </ul>
+        <p>A high score does not mean you will lose your job. A low score does not mean you are safe. Your individual circumstances matter enormously, and we cannot model them all.</p>
+
+        <h2>The Limits of Our Methodology</h2>
+        <p>We use the best research available to us, but our methodology has limits:</p>
+        <ul>
+          <li><strong>O*NET data is generalized.</strong> The standardized occupation that matches your job is an approximation, not an exact description of what you do. Two people with the same job title can have very different day-to-day work.</li>
+          <li><strong>AI capability research is evolving.</strong> Experts disagree about how fast AI will advance and how it will be adopted. We make reasonable judgments based on current research, but reasonable people could weigh the evidence differently.</li>
+          <li><strong>Local conditions vary.</strong> Your industry, region, employer, and seniority all affect how AI will actually impact your work. Our Report cannot account for all of these.</li>
+        </ul>
+
+        <h2>Use Your Judgment</h2>
+        <p>The most important thing you can do with your Report is use it as a starting point for your own thinking, not as a verdict. Read it. Think about it. Talk to people who know your work. Use the Plan as a menu of possibilities, not a checklist of mandates.</p>
+        <p>The future is not fixed. Your Report is one input among many in figuring out how to navigate it.</p>
+
+        <h2>No Liability for Career Outcomes</h2>
+        <p>To the maximum extent permitted by law, Phronesis Labs, LLC and AI Job Risk Check are not liable for any career outcome, positive or negative, that results from your use of our service. This includes job loss, missed opportunities, financial losses, or any other consequence of decisions you make based on your Report.</p>
+        <p>You alone are responsible for your career decisions.</p>
+
+        <h2>Questions</h2>
+        <p>If you have questions about this disclaimer or about how to interpret your Report, email us at <a href="mailto:contact@aijobriskcheck.com">contact@aijobriskcheck.com</a>.</p>
+        <p>Ready to take the assessment? Return to the <Link to="/">AI Job Risk Check homepage</Link>.</p>
+        <p>AI Job Risk Check is a product of <a href="https://phronesislabs.net" target="_blank" rel="noopener noreferrer">Phronesis Labs, LLC</a>, registered in North Carolina, United States.</p>
+
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+===FILE:src/routes/refunds.tsx===
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { buildPageHead } from "@/lib/seo";
+import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+
+export const Route = createFileRoute("/refunds")({
+  head: () =>
+    buildPageHead({
+      path: "/refunds",
+      title: "Refund Policy | AI Job Risk Check",
+      description:
+        "14-day money-back guarantee on AI Job Risk Check. No questions asked.",
+      breadcrumbs: [
+        { name: "Home", path: "/" },
+        { name: "Refund Policy", path: "/refunds" },
+      ],
+    }),
+  component: Refunds,
+});
+
+const TEAL = "#0A6B70";
+const SOFT = "#FAFAF8";
+const CHARCOAL = "#1B1B1B";
+const DISPLAY = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
+const SANS = "Inter, ui-sans-serif, system-ui, sans-serif";
+
+function Refunds() {
+  return (
+    <div style={{ minHeight: "100vh", backgroundColor: SOFT, display: "flex", flexDirection: "column" }}>
+      <style>{`
+        .ajrc-refunds a { color: ${TEAL}; text-decoration: underline; }
+        .ajrc-refunds a:hover { opacity: 0.8; }
+        .ajrc-refunds h1 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 2.5rem; line-height: 1.2; margin: 0 0 1rem; letter-spacing: -0.01em; }
+        .ajrc-refunds h2 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 1.5rem; line-height: 1.3; margin: 2.5rem 0 1rem; letter-spacing: -0.01em; }
+        .ajrc-refunds h3 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 1.25rem; line-height: 1.3; margin: 2rem 0 0.75rem; }
+        .ajrc-refunds p, .ajrc-refunds li { font-family: ${SANS}; color: ${CHARCOAL}; font-size: 1rem; line-height: 1.7; }
+        .ajrc-refunds p { margin: 0 0 1rem; }
+        .ajrc-refunds ul { margin: 0 0 1.25rem; padding-left: 1.5rem; }
+        .ajrc-refunds li { margin-bottom: 0.5rem; }
+        .ajrc-refunds strong { font-weight: 700; color: ${CHARCOAL}; }
+        .ajrc-refunds .lastupdated { color: ${CHARCOAL}; opacity: 0.7; font-style: normal; margin-bottom: 2rem; }
+      `}</style>
+
+      <header style={{ backgroundColor: TEAL, padding: "24px 16px", textAlign: "center" }}>
+        <Link to="/" aria-label="AI Job Risk Check, home">
+          <img
+            src="/logo-stacked.png"
+            alt="AI Job Risk Check"
+            style={{ width: "min(70vw, 320px)", height: "auto", display: "inline-block" }}
+          />
+        </Link>
+      </header>
+
+      <main className="ajrc-refunds" style={{ flex: 1, maxWidth: 720, width: "100%", margin: "0 auto", padding: "48px 24px 64px", boxSizing: "border-box" }}>
+        <Breadcrumbs
+          items={[
+            { name: "Home", path: "/" },
+            { name: "Refund Policy", path: "/refunds" },
+          ]}
+          variant="light"
+        />
+        <h1>Refund Policy</h1>
+        <p className="lastupdated"><strong>Last updated: July 6, 2026</strong></p>
+
+        <p>
+          AI Job Risk Check is a product of <a href="https://phronesislabs.net" target="_blank" rel="noopener noreferrer">Phronesis Labs, LLC</a>. We want you to get value from your purchase. If you don't, we want to make it right.
+        </p>
+        <p>This policy covers both the one-time purchase and the optional monthly coaching subscription.</p>
+
+        <h2>14-Day Money-Back Guarantee</h2>
+        <p>We offer a <strong>full 14-day refund window with no questions asked, on every payment you make to us</strong>.</p>
+        <p>If you are not satisfied with your AI Job Risk Score, Report, Profile, Plan, or any month of coaching for any reason, email us within 14 days of that charge and we will refund it in full.</p>
+        <p>You do not need to justify the refund. You do not need to fill out a survey. You do not need to defend your decision. Just tell us you want a refund and we will process it.</p>
+        <p>This guarantee applies to your one-time purchase of $29.99, which includes the Score, Report, Profile, Plan, and your first month of coaching. It also applies to every coaching subscription charge, even if the month has already begun.</p>
+
+        <h2>Coaching Subscription</h2>
+        <p>Your one-time purchase includes your first month of coaching. It does not turn into a subscription. When that first month ends, nothing renews and you are not charged again. You are billed for continuing coaching only if you actively choose to start the optional monthly subscription.</p>
+        <p>If you do start it, the optional coaching subscription is billed at $12.99 per month, and it renews automatically each month until you cancel. You can cancel at any time by emailing <a href="mailto:contact@aijobriskcheck.com">contact@aijobriskcheck.com</a> or replying to any coaching text, and we will cancel before your next billing date so you are not charged again. Cancelling stops future charges.</p>
+        <p>Coaching is covered by the same full, no-questions-asked guarantee as everything else. Any coaching charge can be refunded in full within 14 days of that charge, even if the month has already begun. If you were charged after you asked to cancel, or a charge was a clear error, email us and we will make it right.</p>
+
+        <h2>How to Request a Refund</h2>
+        <p>Email <a href="mailto:contact@aijobriskcheck.com">contact@aijobriskcheck.com</a> with:</p>
+        <ul>
+          <li>The email address you used to purchase</li>
+          <li>The approximate date of your purchase</li>
+        </ul>
+        <p>That is all we need. We will confirm receipt within one business day and process your refund within three to five business days. Refunds are returned to the original payment method.</p>
+
+        <h2>After 14 Days</h2>
+        <p>After 14 days from your purchase date, refunds are at our discretion and not guaranteed. We may consider refund requests outside the 14-day window for special circumstances (technical failures, billing errors, duplicate charges), but we are not obligated to grant them.</p>
+
+        <h2>What Happens to Your Data After a Refund</h2>
+        <p>If you request a refund, we treat that as a request to also delete your data, unless you tell us otherwise. Your Score, Report, Profile, and Plan will be removed from our system within 30 days of the refund being processed.</p>
+        <p>If you would like to keep your data even after a refund (for your records), let us know in your refund request.</p>
+
+        <h2>Chargebacks</h2>
+        <p>If you initiate a chargeback through your credit card company or bank before contacting us, we may not be able to issue a refund through normal channels. Please email us first, we will almost always resolve the issue faster than a chargeback can.</p>
+
+        <h2>Service Discontinuation</h2>
+        <p>If we discontinue AI Job Risk Check entirely, anyone who has paid within the previous 14 days will be eligible for a full refund. Customers who purchased before that period will receive notice and access to download their existing Reports.</p>
+
+        <h2>Questions</h2>
+        <p>If you have any questions about this policy or about a specific refund request, email us at <a href="mailto:contact@aijobriskcheck.com">contact@aijobriskcheck.com</a>.</p>
+        <p>This policy is part of our broader <Link to="/terms">Terms of Service</Link>.</p>
+        <p>AI Job Risk Check is a product of <a href="https://phronesislabs.net" target="_blank" rel="noopener noreferrer">Phronesis Labs, LLC</a>, registered in North Carolina, United States.</p>
+
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+===FILE:src/routes/contact.tsx===
+import { useState } from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { buildPageHead } from "@/lib/seo";
+import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { supabase } from "@/lib/supabase";
+
+export const Route = createFileRoute("/contact")({
+  head: () =>
+    buildPageHead({
+      path: "/contact",
+      title: "Contact | AI Job Risk Check",
+      description:
+        "Contact AI Job Risk Check with questions about your AI Job Risk Score, report, or coaching.",
+      breadcrumbs: [
+        { name: "Home", path: "/" },
+        { name: "Contact", path: "/contact" },
+      ],
+    }),
+  component: ContactPage,
+});
+
+const TEAL = "#0A6B70";
+const SOFT = "#FAFAF8";
+const CHARCOAL = "#1B1B1B";
+const AMBER = "#F4B400";
+const DISPLAY = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
+const SANS = "Inter, ui-sans-serif, system-ui, sans-serif";
+
+const GENERIC_ERROR =
+  "We couldn't send your message. You can email us directly at customersupport@aijobriskcheck.com.";
+
+function ContactPage() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [website, setWebsite] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (submitting) return;
+    setSubmitting(true);
+    setError(null);
+    try {
+      const { data, error: invokeError } = await supabase.functions.invoke(
+        "contact-form",
+        { body: { name, email, message, website } },
+      );
+      if (invokeError) {
+        setError(GENERIC_ERROR);
+        return;
+      }
+      const errMsg =
+        data && typeof data === "object" && typeof (data as any).error === "string"
+          ? (data as any).error
+          : null;
+      if (errMsg) {
+        setError(errMsg);
+        return;
+      }
+      setSent(true);
+    } catch {
+      setError(GENERIC_ERROR);
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
+  return (
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: SOFT,
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <style>{`
+        .ajrc-contact a { color: ${TEAL}; text-decoration: underline; }
+        .ajrc-contact a:hover { opacity: 0.8; }
+        .ajrc-contact h1 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 2.5rem; line-height: 1.2; margin: 0 0 1rem; letter-spacing: -0.01em; }
+        .ajrc-contact p, .ajrc-contact label { font-family: ${SANS}; color: ${CHARCOAL}; font-size: 1rem; line-height: 1.7; }
+        .ajrc-contact p { margin: 0 0 1rem; }
+        .ajrc-contact label { display: block; font-weight: 700; margin-bottom: 6px; }
+        .ajrc-contact .field { margin-bottom: 20px; }
+        .ajrc-contact input[type="text"], .ajrc-contact input[type="email"], .ajrc-contact textarea {
+          width: 100%; box-sizing: border-box; font-family: ${SANS}; font-size: 1rem; color: ${CHARCOAL};
+          background: #fff; border: 1px solid rgba(27,27,27,0.25); border-radius: 10px; padding: 12px 14px;
+        }
+        .ajrc-contact textarea { min-height: 160px; resize: vertical; }
+        .ajrc-contact input:focus, .ajrc-contact textarea:focus { outline: 2px solid ${TEAL}; outline-offset: 1px; }
+        .ajrc-contact button {
+          font-family: ${DISPLAY}; font-weight: 800; font-size: 1rem; color: ${CHARCOAL};
+          background: ${AMBER}; border: none; border-radius: 12px; padding: 14px 28px; cursor: pointer;
+        }
+        .ajrc-contact button:disabled { opacity: 0.6; cursor: default; }
+        .ajrc-contact .hp {
+          position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+        }
+        .ajrc-contact .note { font-size: 0.9rem; opacity: 0.75; margin-top: 20px; }
+        .ajrc-contact .err {
+          background: #FFF3CD; border: 1px solid #F4B400; border-radius: 10px;
+          padding: 12px 14px; margin-bottom: 16px; font-family: ${SANS}; color: ${CHARCOAL};
+        }
+        .ajrc-contact .ok {
+          background: #fff; border: 2px solid ${TEAL}; border-radius: 12px; padding: 20px;
+          font-family: ${SANS}; color: ${CHARCOAL}; font-size: 1.05rem;
+        }
+      `}</style>
+
+      <header
+        style={{ backgroundColor: TEAL, padding: "24px 16px", textAlign: "center" }}
+      >
+        <Link to="/" aria-label="AI Job Risk Check, home">
+          <img
+            src="/logo-stacked.png"
+            alt="AI Job Risk Check"
+            style={{ width: "min(70vw, 320px)", height: "auto", display: "inline-block" }}
+          />
+        </Link>
+      </header>
+
+      <main
+        className="ajrc-contact"
+        style={{
+          flex: 1,
+          maxWidth: 720,
+          width: "100%",
+          margin: "0 auto",
+          padding: "48px 24px 64px",
+          boxSizing: "border-box",
+        }}
+      >
+        <Breadcrumbs
+          items={[
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]}
+          variant="light"
+        />
+        <h1>Contact us</h1>
+        <p>
+          Questions about your score, your report, or coaching? Send a message and
+          we&rsquo;ll get back to you.
+        </p>
+
+        {sent ? (
+          <div className="ok" role="status">
+            Message sent. We&rsquo;ll reply to your email soon.
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} noValidate={false}>
+            {error && (
+              <div className="err" role="alert">
+                {error}
+              </div>
+            )}
+
+            <div className="field">
+              <label htmlFor="contact-name">Name</label>
+              <input
+                id="contact-name"
+                type="text"
+                name="name"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+
+            <div className="field">
+              <label htmlFor="contact-email">Email</label>
+              <input
+                id="contact-email"
+                type="email"
+                name="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+
+            <div className="field">
+              <label htmlFor="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+            </div>
+
+            <div className="hp" aria-hidden="true">
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+              />
+            </div>
+
+            <button type="submit" disabled={submitting}>
+              {submitting ? "Sending…" : "Send Message"}
+            </button>
+          </form>
+        )}
+
+        <p className="note">
+          Prefer email? Reach us at{" "}
+          <a href="mailto:customersupport@aijobriskcheck.com">
+            customersupport@aijobriskcheck.com
+          </a>
+        </p>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+===FILE:src/routes/sms-consent.tsx===
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { buildPageHead } from "@/lib/seo";
+import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+
+export const Route = createFileRoute("/sms-consent")({
+  head: () =>
+    buildPageHead({
+      path: "/sms-consent",
+      title: "SMS Consent for AI Job Risk Check Coaching",
+      description:
+        "How AI Job Risk Check collects consent to send coaching text messages.",
+      noindex: true,
+      breadcrumbs: [
+        { name: "Home", path: "/" },
+        { name: "SMS Consent", path: "/sms-consent" },
+      ],
+    }),
+  component: SmsConsent,
+});
+
+const TEAL = "#0A6B70";
+const SOFT = "#FAFAF8";
+const CHARCOAL = "#1B1B1B";
+const DISPLAY = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
+const SANS = "Inter, ui-sans-serif, system-ui, sans-serif";
+
+function SmsConsent() {
+  return (
+    <div style={{ minHeight: "100vh", backgroundColor: SOFT, display: "flex", flexDirection: "column" }}>
+      <style>{`
+        .ajrc-sms-consent a { color: ${TEAL}; text-decoration: underline; }
+        .ajrc-sms-consent a:hover { opacity: 0.8; }
+        .ajrc-sms-consent h1 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 2.5rem; line-height: 1.2; margin: 0 0 1rem; letter-spacing: -0.01em; }
+        .ajrc-sms-consent h2 { font-family: ${DISPLAY}; font-weight: 800; color: ${TEAL}; font-size: 1.5rem; line-height: 1.3; margin: 2.5rem 0 1rem; letter-spacing: -0.01em; }
+        .ajrc-sms-consent p, .ajrc-sms-consent li { font-family: ${SANS}; color: ${CHARCOAL}; font-size: 1rem; line-height: 1.7; }
+        .ajrc-sms-consent p { margin: 0 0 1rem; }
+        .ajrc-sms-consent ul { margin: 0 0 1.25rem; padding-left: 1.5rem; }
+        .ajrc-sms-consent li { margin-bottom: 0.5rem; }
+        .ajrc-sms-consent strong { font-weight: 700; color: ${CHARCOAL}; }
+        .ajrc-sms-consent figure { margin: 1.5rem 0 2rem; }
+        .ajrc-sms-consent img { width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto; border-radius: 8px; }
+        .ajrc-sms-consent figcaption { font-family: ${SANS}; color: ${CHARCOAL}; opacity: 0.7; font-size: 0.875rem; line-height: 1.5; text-align: center; margin-top: 0.75rem; }
+      `}</style>
+
+      <header style={{ backgroundColor: TEAL, padding: "24px 16px", textAlign: "center" }}>
+        <Link to="/" aria-label="AI Job Risk Check, home">
+          <img
+            src="/logo-stacked.png"
+            alt="AI Job Risk Check"
+            style={{ width: "min(70vw, 320px)", height: "auto", display: "inline-block" }}
+          />
+        </Link>
+      </header>
+
+      <main className="ajrc-sms-consent" style={{ flex: 1, maxWidth: 720, width: "100%", margin: "0 auto", padding: "48px 24px 64px", boxSizing: "border-box" }}>
+        <Breadcrumbs
+          items={[
+            { name: "Home", path: "/" },
+            { name: "SMS Consent", path: "/sms-consent" },
+          ]}
+          variant="light"
+        />
+        <h1>SMS Consent</h1>
+
+        <p>
+          AI Job Risk Check is a product of{" "}
+          <a href="https://phronesislabs.net" target="_blank" rel="noopener noreferrer">
+            Phronesis Labs LLC
+          </a>
+          , North Carolina, United States. This page shows how customers give consent to receive coaching text messages. It exists so the consent screen can be reviewed without completing the assessment.
+        </p>
+
+        <h2>Where consent is collected</h2>
+        <p>
+          Consent is collected on the purchase card at{" "}
+          <a href="https://aijobriskcheck.net/score">https://aijobriskcheck.net/score</a>, before payment. That page is generated after a visitor enters a job title on the homepage and rates the listed tasks, so it cannot be reached by direct URL. The screenshot below shows the live purchase card as a customer sees it.
+        </p>
+
+        <figure>
+          <img
+            src="/sms-consent.png"
+            alt="Screenshot of the AI Job Risk Check purchase card showing the mobile number field and the unchecked SMS consent checkbox."
+          />
+          <figcaption>
+            Live purchase card at aijobriskcheck.com. The consent box is unchecked by default.
+          </figcaption>
+        </figure>
+
+        <h2>The consent wording</h2>
+        <p>
+          &ldquo;Text me my coaching messages. My purchase includes a month of coaching delivered by text from AI Job Risk Check at the number above. Msg frequency varies, up to 10 msgs/month. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help. See Terms and Privacy Policy.&rdquo;
+        </p>
+
+        <h2>Program details</h2>
+        <ul>
+          <li><strong>Program name:</strong> AI Job Risk Check Coaching</li>
+          <li><strong>Message type:</strong> one-to-one career coaching for customers who purchased the AI Job Risk Report. No marketing or promotional messages are sent by text.</li>
+          <li><strong>Message frequency:</strong> varies, up to 10 messages per month.</li>
+          <li>Msg &amp; data rates may apply.</li>
+          <li>Reply STOP to cancel. Reply HELP for help.</li>
+          <li><strong>Support:</strong>{" "}
+            <a href="mailto:customersupport@aijobriskcheck.com">
+              customersupport@aijobriskcheck.com
+            </a>
+          </li>
+          <li>Mobile numbers and SMS consent are never sold, rented, shared, or transferred to any third party.</li>
+        </ul>
+
+        <p>
+          For full details see our{" "}
+          <Link to="/privacy">Privacy Policy</Link> and{" "}
+          <Link to="/terms">Terms of Service</Link>.
+        </p>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+===FILE:src/routes/blog.tsx===
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { HeroJobForm } from "@/components/HeroJobForm";
+import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { buildPageHead, SITE_URL, SITE_NAME } from "@/lib/seo";
+
+const TEAL = "#0A6B70";
+const AMBER = "#F4B400";
+const SOFT = "#FAFAF8";
+const CHARCOAL = "#1B1B1B";
+
+const DISPLAY = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
+const SANS = "Inter, ui-sans-serif, system-ui, sans-serif";
+
+const OUTER_PADDING = "clamp(16px, 2vw, 32px)";
+const CONTAINER_MAX_CSS = "min(96vw, 1600px)";
+
+interface Post {
+  slug: string;
+  title: string;
+  description: string;
+  date: string; // ISO 8601, e.g. "2026-07-03"
+  readingTime: string;
+}
+
+const posts: Post[] = [
+  {
+    slug: "goldman-sachs-ai-15-million-jobs",
+    title:
+      "AI Will Displace 15 Million US Workers, Goldman Sachs Warns. Is Yours One of Them?",
+    description:
+      "Goldman Sachs says AI could reallocate 9% of the US workforce over the next decade. Here is what the same economist said that the headlines cut out, and what to do about your own job.",
+    date: "2026-07-13",
+    readingTime: "7 min read",
+  },
+  {
+    slug: "what-employers-want-from-new-hires-ai",
+    title: "AI Isn't Replacing Expertise: It's Raising the Bar for New Hires",
+    description:
+      "A new Harvard Business Review study of 30 companies finds generative AI is making employers want more from new hires, not less, and it all comes down to task-level thinking.",
+    date: "2026-07-12",
+    readingTime: "9 min read",
+  },
+
+  {
+    slug: "is-ai-taking-jobs-yet",
+    title: "Is AI Taking Jobs Yet? What the 2026 Data Really Shows",
+    description:
+      "Is AI taking jobs? The 2026 data from Yale, Stanford, and the Fed shows no broad displacement yet, but real warning signs for young workers.",
+    date: "2026-07-09",
+    readingTime: "9 min read",
+  },
+  {
+    slug: "are-entry-level-jobs-disappearing-ai",
+    title: "Are Entry-Level Jobs Disappearing Because of AI? (2026 Data)",
+    description:
+      "Are entry-level jobs disappearing because of AI? See the verified 2026 data on young workers, what it really means, and what to do next.",
+    date: "2026-07-09",
+    readingTime: "8 min read",
+  },
+  {
+    slug: "what-people-use-ai-for-at-work",
+    title: "What Do People Use AI For at Work? A Task-by-Task Look at the 2026 Data",
+    description:
+      "Real O*NET task data from the Anthropic Economic Index shows the exact tasks people use AI for at work, not just the job titles.",
+    date: "2026-07-09",
+    readingTime: "8 min read",
+  },
+  {
+    slug: "will-ai-replace-software-developers",
+    title: "Will AI Replace Software Developers? What the 2026 Data Shows",
+    description:
+      "Will AI replace software developers? The 2026 labor data and controlled studies show which coding tasks AI does now, and which still need you.",
+    date: "2026-07-09",
+    readingTime: "9 min read",
+  },
+  {
+    slug: "will-ai-replace-accountants",
+    title: "Will AI Replace Accountants? A Task-Level Look at the 2026 Data",
+    description:
+      "Will AI replace accountants? We break accounting into daily tasks and show what AI already does and what still needs a human, using 2026 BLS and O*NET data.",
+    date: "2026-07-09",
+    readingTime: "8 min read",
+  },
+  {
+    slug: "do-ai-skills-pay-more",
+    title: "Do AI Skills Actually Pay More? What the 2026 Wage Data Shows",
+    description:
+      "AI skills carry a 62% wage premium in 2026, according to PwC. Here is what the data really shows, the caveats worth knowing, and which AI skills to build now.",
+    date: "2026-07-09",
+    readingTime: "9 min read",
+  },
+  {
+    slug: "future-proof-your-career-against-ai",
+    title: "Mindset or Skillset? How to Future-Proof Your Career Against AI",
+    description:
+      "A Goldman Sachs CIO says thriving with AI is about mindset, not skillset. The research says you need both, starting with a task-level map of your job.",
+    date: "2026-07-07",
+    readingTime: "8 min read",
+  },
+  {
+    slug: "will-ai-take-my-job-medical-transcriptionist",
+    title: "Will AI Take My Job? A Medical Transcriptionist's Career Pivot",
+    description:
+      "Medical transcription is declining as AI absorbs the hours. See the career pivot, and why an AI job risk calculator alone is not enough.",
+    date: "2026-07-04",
+    readingTime: "7 min read",
+  },
+  {
+    slug: "jobs-most-at-risk-from-ai",
+    title: "Which Jobs Are Most at Risk from AI Right Now? (2026 Data)",
+    description:
+      "The jobs most exposed to AI in 2026, the tasks being absorbed, and how to find your personal AI job risk score in 60 seconds.",
+    date: "2026-07-03",
+    readingTime: "6 min read",
+  },
+];
+
+function formatDate(iso: string): string {
+  const d = new Date(iso);
+  return d.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+export const Route = createFileRoute("/blog")({
+  head: () =>
+    buildPageHead({
+      path: "/blog",
+      title: "Blog | AI Job Risk Check",
+      description:
+        "Task-level analysis of AI and work, grounded in O*NET data and peer-reviewed research. New posts on jobs, skills, and AI exposure.",
+      ogType: "website",
+      breadcrumbs: [
+        { name: "Home", path: "/" },
+        { name: "Blog", path: "/blog" },
+      ],
+      jsonLd: {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "@id": SITE_URL + "/blog#blog",
+        name: "AI Job Risk Check Blog",
+        url: SITE_URL + "/blog",
+        description: "Data-backed writing on how AI is changing work at the task level.",
+        isPartOf: { "@id": SITE_URL + "#website" },
+        publisher: { "@id": "https://aijobriskcheck.net/#organization" },
+      },
+    }),
+  component: BlogPage,
+});
+
+function BlogPage() {
+  return (
+    <div style={{ minHeight: "100vh", backgroundColor: TEAL, fontFamily: SANS }}>
+      <style>{`
+        .ajrc-container {
+          width: 100%;
+          max-width: ${CONTAINER_MAX_CSS};
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: ${OUTER_PADDING};
+          padding-right: ${OUTER_PADDING};
+        }
+        .ajrc-post-card {
+          display: block;
+          width: 100%;
+          background-color: ${SOFT};
+          border-radius: 16px;
+          padding: 24px;
+          text-decoration: none;
+          color: inherit;
+          transition: transform 150ms ease, box-shadow 150ms ease;
+          min-height: 140px;
+        }
+        .ajrc-post-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+        }
+        .ajrc-post-card:active {
+          transform: translateY(0);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        @media (min-width: 640px) {
+          .ajrc-post-card {
+            padding: 32px;
+          }
+        }
+      `}</style>
+
+      <main className="ajrc-container" style={{ paddingTop: "clamp(40px, 6vw, 72px)", paddingBottom: "clamp(40px, 6vw, 72px)" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <Breadcrumbs
+            items={[
+              { name: "Home", path: "/" },
+              { name: "Blog", path: "/blog" },
+            ]}
+            variant="dark"
+            style={{ textAlign: "center" }}
+          />
+          <h1
+            style={{
+              fontFamily: DISPLAY,
+              fontWeight: 800,
+              fontSize: "clamp(32px, 4.5vw, 46px)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.01em",
+              margin: 0,
+              marginBottom: 16,
+              textAlign: "center",
+              color: SOFT,
+            }}
+          >
+            Blog
+          </h1>
+
+          <p
+            style={{
+              fontFamily: SANS,
+              fontWeight: 400,
+              fontSize: "clamp(17px, 1.6vw, 19px)",
+              lineHeight: 1.65,
+              margin: 0,
+              marginBottom: 40,
+              textAlign: "center",
+              color: "rgba(250, 250, 248, 0.92)",
+            }}
+          >
+            Data-backed writing on how AI is changing work, one task at a time.
+          </p>
+
+          {posts.length === 0 ? (
+            <p
+              style={{
+                fontFamily: SANS,
+                fontWeight: 400,
+                fontSize: "clamp(16px, 1.4vw, 18px)",
+                lineHeight: 1.6,
+                textAlign: "center",
+                color: "rgba(250, 250, 248, 0.9)",
+              }}
+            >
+              Posts coming soon.
+            </p>
+          ) : (
+            <ul
+              style={{
+                listStyle: "none",
+                margin: 0,
+                padding: 0,
+                display: "flex",
+                flexDirection: "column",
+                gap: 20,
+              }}
+            >
+              {posts
+                .slice()
+                .sort((a, b) => b.date.localeCompare(a.date))
+                .map((post) => (
+                  <li key={post.slug}>
+                    <Link
+                      to={`/${post.slug}`}
+                      className="ajrc-post-card"
+                      aria-label={`Read ${post.title}`}
+                    >
+                      <h2
+                        style={{
+                          fontFamily: DISPLAY,
+                          fontWeight: 800,
+                          fontSize: "clamp(20px, 2.4vw, 26px)",
+                          lineHeight: 1.2,
+                          letterSpacing: "-0.01em",
+                          margin: 0,
+                          marginBottom: 12,
+                          color: CHARCOAL,
+                        }}
+                      >
+                        {post.title}
+                      </h2>
+
+                      <p
+                        style={{
+                          fontFamily: SANS,
+                          fontWeight: 400,
+                          fontSize: "clamp(15px, 1.4vw, 17px)",
+                          lineHeight: 1.6,
+                          margin: 0,
+                          color: "rgba(27, 27, 27, 0.82)",
+                        }}
+                      >
+                        {post.description}
+                      </p>
+                    </Link>
+
+                    <p
+                      style={{
+                        fontFamily: SANS,
+                        fontWeight: 500,
+                        fontSize: 14,
+                        lineHeight: 1,
+                        margin: 0,
+                        marginTop: 8,
+                        textAlign: "left",
+                        color: "rgba(250, 250, 248, 0.9)",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 10,
+                        flexWrap: "wrap",
+                      }}
+                    >
+                      <span>{formatDate(post.date)}</span>
+                      <span style={{ color: AMBER }} aria-hidden="true">
+                        ·
+                      </span>
+                      <span>{post.readingTime}</span>
+                    </p>
+                  </li>
+                ))}
+            </ul>
+          )}
+        </div>
+      </main>
+
+      <section style={{ backgroundColor: TEAL, paddingTop: 48, paddingBottom: 56 }}>
+        <div className="ajrc-container">
+          <div style={{ maxWidth: 520, margin: "0 auto", textAlign: "center" }}>
+            <h2
+              style={{
+                fontFamily: DISPLAY,
+                fontWeight: 800,
+                fontSize: "clamp(24px, 3vw, 32px)",
+                color: SOFT,
+                margin: 0,
+                marginBottom: 20,
+              }}
+            >
+              Get your free AI Job Risk Score
+            </h2>
+            <HeroJobForm />
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  );
+}
+
+===FILE:src/routes/ai-job-risk/index.tsx===
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { Search } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+
+import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { buildPageHead, DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/seo";
+import { supabase } from "@/lib/supabase";
+
+const TEAL = "#0A6B70";
+const PAGE_TEAL = "#147C82";
+const AMBER = "#F4B400";
+const SOFT = "#FAFAF8";
+const CHARCOAL = "#1B1B1B";
+
+
+const DISPLAY = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
+const SANS = "Inter, ui-sans-serif, system-ui, sans-serif";
+
+type Card = {
+  slug: string;
+  title: string;
+  band: string;
+  band_color: string;
+  representative_score: number;
+  soc_code: string | null;
+};
+
+const SOC_MAJOR_LABELS: Record<string, string> = {
+  "11": "Management",
+  "13": "Business and Finance",
+  "15": "Computer and Mathematical",
+  "17": "Architecture and Engineering",
+  "19": "Life, Physical, and Social Science",
+  "21": "Community and Social Service",
+  "23": "Legal",
+  "25": "Education and Library",
+  "27": "Arts, Design, Entertainment, and Media",
+  "29": "Healthcare Practitioners",
+  "31": "Healthcare Support",
+  "33": "Protective Service",
+  "35": "Food Preparation and Serving",
+  "37": "Building and Grounds Maintenance",
+  "39": "Personal Care and Service",
+  "41": "Sales",
+  "43": "Office and Administrative Support",
+  "45": "Farming, Fishing, and Forestry",
+  "47": "Construction and Extraction",
+  "49": "Installation, Maintenance, and Repair",
+  "51": "Production",
+  "53": "Transportation and Material Moving",
+};
+
+function socMajor(code: string | null | undefined): string | null {
+  if (!code) return null;
+  const m = code.slice(0, 2);
+  return SOC_MAJOR_LABELS[m] ? m : null;
+}
+
+const BAND_ORDER = ["Severe", "Significant", "Moderate", "Limited", "Minimal"] as const;
+
+function bandHex(color: string): string {
+  const c = (color || "").toLowerCase();
+  if (c === "green") return "#34A853";
+  if (c === "red") return "#EA4335";
+  return "#F4B400";
+}
+
+function scoreDot(score: number): string {
+  if (score >= 80) return "#EA4335";
+  if (score >= 60) return "#F57C00";
+  if (score >= 40) return "#F4B400";
+  if (score >= 20) return "#7CB342";
+  return "#34A853";
+}
+
+const BAND_LABELS: Record<string, string> = {
+  Severe: "Severe exposure",
+  Significant: "Significant exposure",
+  Moderate: "Moderate exposure",
+  Limited: "Limited exposure",
+  Minimal: "Minimal exposure",
+};
+
+function normalizeBand(band: string): string {
+  if (!band) return "";
+  return band.charAt(0).toUpperCase() + band.slice(1).toLowerCase();
+}
+
+async function fetchCards(): Promise<Card[]> {
+  const { data, error } = await supabase.rpc("app_list_published_occupation_cards");
+  if (error) {
+    console.error("app_list_published_occupation_cards error:", error.message);
+    return [];
+  }
+  return (data as Card[] | null) ?? [];
+}
+
+export const Route = createFileRoute("/ai-job-risk/")({
+  loader: async () => {
+    const cards = await fetchCards();
+    return { cards };
+  },
+  head: ({ loaderData }) => {
+    const cards = loaderData?.cards ?? [];
+    const url = SITE_URL + "/ai-job-risk";
+    const description =
+      "Browse AI job risk scores for hundreds of occupations. Task-level exposure based on O*NET and peer-reviewed research from Eloundou (2024, Science).";
+    const webPage = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "AI Job Risk by Occupation | AI Job Risk Check",
+      description,
+      url,
+      inLanguage: "en",
+      publisher: { "@id": "https://aijobriskcheck.net/#organization" },
+    };
+    const collectionPage = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: "AI Job Risk by Occupation",
+      description,
+      url,
+      inLanguage: "en",
+      isPartOf: { "@type": "WebSite", name: "AI Job Risk Check", url: SITE_URL },
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: cards.length,
+        itemListElement: cards.map((c, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: c.title,
+          url: SITE_URL + "/ai-job-risk/" + c.slug,
+        })),
+      },
+    };
+    const breadcrumb = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL + "/" },
+        { "@type": "ListItem", position: 2, name: "AI Job Risk", item: url },
+      ],
+    };
+    const itemList = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      itemListElement: cards.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.title,
+        url: SITE_URL + "/ai-job-risk/" + c.slug,
+      })),
+    };
+    const faqPage = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Which jobs are most at risk from AI?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Blockchain engineers, court reporters, mathematicians, and proofreaders score 95, the highest on this index. Exposure is task-level, so the ranking reflects how much of the work AI can already do, not predicted job losses. See the full analysis.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Which jobs are safest from AI?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Occupations in farming, food preparation, building maintenance, and the skilled trades cluster lowest. These roles depend on physical presence and situational judgment that current models cannot reach.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How is AI job risk measured?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Each O*NET task carries an exposure value from Eloundou et al. (2024, Science), weighted by how much of a worker's time it takes. The formula is published.",
+          },
+        },
+      ],
+    };
+    return buildPageHead({
+      path: "/ai-job-risk",
+      title: "AI Job Risk by Occupation | AI Job Risk Check",
+      description,
+      ogType: "website",
+      ogImage: DEFAULT_OG_IMAGE,
+      jsonLd: [webPage, collectionPage, breadcrumb, itemList, faqPage],
+    });
+  },
+
+  errorComponent: ({ error }) => (
+    <div style={{ minHeight: "100vh", background: TEAL, color: SOFT, padding: 32, fontFamily: SANS }}>
+      <p>Something went wrong loading this page.</p>
+      <p style={{ opacity: 0.75, fontSize: 13 }}>We couldn't load occupations right now. Please refresh.</p>
+      <Link to="/" style={{ color: AMBER, fontWeight: 700 }}>Back to home</Link>
+    </div>
+  ),
+  notFoundComponent: () => (
+    <div style={{ minHeight: "100vh", background: TEAL, color: SOFT, padding: 32, fontFamily: SANS }}>
+      <p>Page not found.</p>
+      <Link to="/" style={{ color: AMBER, fontWeight: 700 }}>Back to home</Link>
+    </div>
+  ),
+  component: HubPage,
+});
+
+function HubPage() {
+  const { cards } = Route.useLoaderData() as { cards: Card[] };
+
+  const groups = new Map<string, Card[]>();
+  for (const c of cards) {
+    const key = normalizeBand(c.band);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key)!.push(c);
+  }
+
+  const orderedGroups = BAND_ORDER
+    .map((band) => ({ band, rows: groups.get(band) ?? [] }))
+    .filter((g) => g.rows.length > 0);
+
+  const [query, setQuery] = useState("");
+  const normalizeText = (s: string) =>
+    s.toLowerCase().replace(/[-_,.'/]/g, " ").replace(/\s+/g, " ").trim();
+  const normalizedQuery = normalizeText(query);
+
+  const stats = useMemo(() => {
+    const total = cards.length;
+    const scores = cards
+      .map((c) => Number(c.representative_score))
+      .filter((n) => Number.isFinite(n))
+      .sort((a, b) => a - b);
+    let median = 0;
+    if (scores.length > 0) {
+      const mid = Math.floor(scores.length / 2);
+      median =
+        scores.length % 2 === 0 ? (scores[mid - 1] + scores[mid]) / 2 : scores[mid];
+    }
+    const highShare =
+      scores.length > 0
+        ? Math.round((scores.filter((n) => n >= 50).length / scores.length) * 100)
+        : 0;
+    return { total, median: Math.round(median), highShare };
+  }, [cards]);
+
+
+  const [activeField, setActiveField] = useState<string | null>(null);
+
+  const fieldChips = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const c of cards) {
+      const m = socMajor(c.soc_code);
+      if (!m) continue;
+      counts.set(m, (counts.get(m) ?? 0) + 1);
+    }
+    return Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map(([code, count]) => ({ code, label: SOC_MAJOR_LABELS[code], count }));
+  }, [cards]);
+
+  // Collapsible "Filter by field" chip row: clip to one row via max-height.
+  const [userExpanded, setUserExpanded] = useState(false);
+  const chipsWrapRef = useRef<HTMLDivElement>(null);
+  const chipRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const [rowHeight, setRowHeight] = useState<number | null>(null);
+  const [activeHidden, setActiveHidden] = useState(false);
+
+  const measure = useCallback(() => {
+    const first = chipRefs.current[0];
+    if (!first) return;
+    setRowHeight(first.offsetHeight);
+    const firstTop = first.offsetTop;
+    const idx = activeField ? fieldChips.findIndex((f) => f.code === activeField) : -1;
+    // chipRefs[0] is "All fields"; field chips are at indices 1..N.
+    const activeEl = idx >= 0 ? chipRefs.current[idx + 1] : null;
+    setActiveHidden(!!activeEl && activeEl.offsetTop > firstTop);
+  }, [activeField, fieldChips]);
+
+  useLayoutEffect(() => { measure(); }, [measure]);
+  useEffect(() => {
+    const onResize = () => measure();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [measure]);
+  // When the user starts a search, collapse the chip row unless they re-expand it.
+  useEffect(() => {
+    if (normalizedQuery) setUserExpanded(false);
+  }, [normalizedQuery]);
+
+  const effectiveExpanded = userExpanded || activeHidden;
+
+  const [expandedBands, setExpandedBands] = useState<Set<string>>(new Set());
+  const toggleBand = (band: string) => {
+    setExpandedBands((prev) => {
+      const next = new Set(prev);
+      if (next.has(band)) next.delete(band);
+      else next.add(band);
+      return next;
+    });
+  };
+
+  const matchSet = useMemo(() => {
+    if (!normalizedQuery && !activeField) return null;
+    const set = new Set<string>();
+    for (const c of cards) {
+      const okTitle = !normalizedQuery || normalizeText(c.title || "").includes(normalizedQuery);
+      const okField = !activeField || socMajor(c.soc_code) === activeField;
+      if (okTitle && okField) set.add(c.slug);
+    }
+    return set;
+  }, [cards, normalizedQuery, activeField]);
+
+  const matchCount = matchSet ? matchSet.size : cards.length;
+  const filterActive = matchSet !== null;
+
+
+  const renderCard = (c: Card, isFirst: boolean) => {
+    const hidden = matchSet !== null && !matchSet.has(c.slug);
+    return (
+      <li key={c.slug} hidden={hidden} className={`ajrc-hub-row-item${isFirst ? " is-first" : ""}`}>
+        <Link
+          to="/ai-job-risk/$slug"
+          params={{ slug: c.slug }}
+          className="ajrc-hub-row"
+          aria-label={`${c.title}, AI exposure score ${c.representative_score}`}
+        >
+          <span className="ajrc-hub-row-title">{c.title}</span>
+          <span className="ajrc-hub-row-meta">
+            <span
+              className="ajrc-hub-row-dot"
+              style={{ background: scoreDot(c.representative_score) }}
+              aria-hidden="true"
+            />
+            <span className="ajrc-hub-row-score">{c.representative_score}</span>
+            <span className="ajrc-hub-row-out">/100</span>
+          </span>
+        </Link>
+      </li>
+    );
+  };
+
+
+
+  return (
+    <div style={{ minHeight: "100vh", background: PAGE_TEAL, fontFamily: SANS, color: SOFT }}>
+      <style>{`
+        .ajrc-hub-card {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+          width: 100%;
+          background: ${SOFT};
+          color: ${CHARCOAL};
+          border-radius: 14px;
+          padding: 18px 20px;
+          text-decoration: none;
+          min-height: 64px;
+          transition: transform 150ms ease, box-shadow 150ms ease;
+        }
+        .ajrc-hub-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+        }
+        .ajrc-hub-intro-link {
+          color: ${AMBER};
+          text-decoration: underline;
+        }
+        .ajrc-hub-intro-link:hover { color: #FFD24D; }
+        .ajrc-hub-h1 {
+          font-size: 28px !important;
+          margin: 0 0 26px 0 !important;
+        }
+        .ajrc-hub-intro {
+          font-size: 15px !important;
+          line-height: 1.6 !important;
+          margin: 0 0 26px 0 !important;
+        }
+        .ajrc-hub-band-name { font-size: 18px !important; }
+        .ajrc-hub-faq-heading { font-size: 20px !important; }
+        @media (min-width: 1024px) {
+          .ajrc-hub-h1 { font-size: 36px !important; }
+          .ajrc-hub-intro { font-size: 16px !important; line-height: 1.65 !important; }
+          .ajrc-hub-band-name { font-size: 20px !important; }
+          .ajrc-hub-faq-heading { font-size: 24px !important; }
+        }
+        .ajrc-hub-stats {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+          margin: 0 0 26px 0;
+        }
+        .ajrc-hub-stat {
+          background: ${TEAL};
+          border-radius: 10px;
+          padding: 12px;
+        }
+        .ajrc-hub-stat-num {
+          color: ${AMBER};
+          font-size: 22px;
+          font-weight: 500;
+          font-family: ${DISPLAY};
+          line-height: 1.1;
+        }
+        .ajrc-hub-stat-label {
+          color: rgba(250,250,248,0.85);
+          font-size: 11px;
+          line-height: 1.3;
+          margin-top: 4px;
+        }
+        @media (min-width: 1024px) {
+          .ajrc-hub-stats {
+            gap: 12px;
+          }
+          .ajrc-hub-stat { padding: 18px; }
+          .ajrc-hub-stat-num { font-size: 28px; }
+          .ajrc-hub-stat-label { font-size: 12px; line-height: normal; }
+        }
+
+        .ajrc-hub-search-input::placeholder {
+          color: #6B6B66;
+          font-size: 15px;
+          opacity: 1;
+        }
+        .ajrc-hub-chip {
+          font-family: ${SANS};
+          font-size: 11px;
+          padding: 5px 11px;
+          border-radius: 999px;
+          background: transparent;
+          border: 1px solid rgba(250,250,248,0.4);
+          color: ${SOFT};
+          cursor: pointer;
+          line-height: 1.2;
+          transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+        }
+        .ajrc-hub-chip:hover { border-color: rgba(250,250,248,0.75); }
+        .ajrc-hub-chip.is-active {
+          background: ${AMBER};
+          color: ${CHARCOAL};
+          border-color: transparent;
+        }
+        .ajrc-hub-band-heading {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          gap: 12px;
+          margin: 0 0 10px 0;
+          font-family: ${DISPLAY};
+        }
+        .ajrc-hub-band-name {
+          color: #FFFFFF;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 1.2;
+        }
+        .ajrc-hub-band-count {
+          color: rgba(255,255,255,0.7);
+          font-size: 12px;
+          font-weight: 400;
+        }
+        .ajrc-hub-row-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .ajrc-hub-row-list.is-collapsed .ajrc-hub-row-item:nth-child(n+9) {
+          display: none;
+        }
+        .ajrc-hub-showall {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          margin-top: 12px;
+          padding: 0;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          color: ${AMBER};
+          font-family: ${SANS};
+          font-size: 12px;
+          line-height: 1.2;
+        }
+        .ajrc-hub-showall:hover { color: #FFD24D; }
+        .ajrc-hub-showall-chev {
+          display: inline-block;
+          transition: transform 150ms ease;
+          font-size: 12px;
+          line-height: 1;
+        }
+        .ajrc-hub-showall-chev.is-open { transform: rotate(180deg); }
+        .ajrc-hub-row-item {
+          border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+        .ajrc-hub-row-item.is-first {
+          border-top: 1px solid rgba(255,255,255,0.15);
+        }
+        .ajrc-hub-row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+          width: 100%;
+          padding: 11px 0;
+          text-decoration: none;
+          transition: background 120ms ease;
+        }
+        .ajrc-hub-row:hover {
+          background: rgba(255,255,255,0.06);
+        }
+        .ajrc-hub-row-title {
+          color: #FFFFFF;
+          font-family: ${SANS};
+          font-size: 13px;
+          line-height: 1.35;
+          transition: color 120ms ease;
+        }
+        .ajrc-hub-row:hover .ajrc-hub-row-title {
+          color: ${AMBER};
+        }
+        .ajrc-hub-row-meta {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          flex: none;
+        }
+        .ajrc-hub-row-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 999px;
+          display: inline-block;
+        }
+        .ajrc-hub-row-score {
+          color: #FFFFFF;
+          font-size: 13px;
+          font-weight: 500;
+          font-family: ${DISPLAY};
+        }
+        .ajrc-hub-row-out {
+          color: rgba(255,255,255,0.55);
+          font-size: 11px;
+        }
+        .ajrc-hub-faq {
+          width: 100%;
+          max-width: 720px;
+          margin: 0 auto 26px;
+          padding: 0;
+        }
+        .ajrc-hub-bands { margin: 0 0 26px 0; }
+        .ajrc-hub-bands > section { margin: 0; }
+        .ajrc-hub-bands > section + section { margin-top: 20px; }
+
+        .ajrc-hub-faq-heading {
+          color: #FFFFFF;
+          font-size: 24px;
+          font-weight: 500;
+          font-family: ${DISPLAY};
+          line-height: 1.25;
+          margin: 0 0 18px 0;
+        }
+        .ajrc-hub-faq-list {
+          margin: 0;
+          padding: 0;
+        }
+        .ajrc-hub-faq-pair {
+          margin: 0 0 16px 0;
+        }
+        .ajrc-hub-faq-pair:last-child {
+          margin-bottom: 0;
+        }
+        .ajrc-hub-faq-q {
+          color: #FFFFFF;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 1.4;
+          margin: 0 0 4px 0;
+        }
+        .ajrc-hub-faq-a {
+          color: rgba(255,255,255,0.9);
+          font-size: 13px;
+          line-height: 1.6;
+          margin: 0;
+        }
+        .ajrc-hub-faq-link {
+          color: ${AMBER};
+          text-decoration: underline;
+        }
+        .ajrc-hub-faq-link:hover { color: #FFD24D; }
+        .ajrc-hub-cta-band {
+          width: 100%;
+          background: ${TEAL};
+          padding: 32px 0;
+        }
+        .ajrc-hub-cta-inner {
+          width: 100%;
+          max-width: 520px;
+          margin: 0 auto;
+          padding: 0 20px;
+          text-align: center;
+        }
+        .ajrc-hub-cta-heading {
+          color: #FFFFFF;
+          font-family: ${DISPLAY};
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 1.3;
+          margin: 0 0 6px 0;
+        }
+        .ajrc-hub-cta-sub {
+          color: rgba(255,255,255,0.9);
+          font-size: 13px;
+          line-height: 1.5;
+          margin: 0;
+        }
+        .ajrc-hub-cta-btn {
+          display: block;
+          width: 100%;
+          max-width: 280px;
+          margin: 16px auto 0;
+          padding: 13px 20px;
+          background: ${AMBER};
+          color: ${CHARCOAL};
+          font-family: ${DISPLAY};
+          font-size: 14px;
+          font-weight: 500;
+          text-decoration: none;
+          border-radius: 7px;
+          text-align: center;
+          transition: background-color 150ms ease;
+        }
+        .ajrc-hub-cta-btn:hover { background-color: #E0A400; }
+        .ajrc-hub-cta-btn:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 2px; }
+
+        .ajrc-hub-bands-panel {
+          width: 100%;
+          background: ${TEAL};
+          border-radius: 10px;
+          padding: 18px;
+          margin: 0 0 26px 0;
+          box-sizing: border-box;
+        }
+        .ajrc-hub-bands-panel-heading {
+          color: #FFFFFF;
+          font-size: 16px;
+          font-weight: 500;
+          font-family: ${DISPLAY};
+          line-height: 1.3;
+          margin: 0 0 14px 0;
+        }
+        .ajrc-hub-bands-panel-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+        }
+        .ajrc-hub-bands-panel-row {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 12px;
+          line-height: 1.35;
+        }
+        .ajrc-hub-bands-panel-dot {
+          width: 9px;
+          height: 9px;
+          border-radius: 999px;
+          flex: none;
+        }
+        .ajrc-hub-bands-panel-label {
+          color: #FFFFFF;
+          font-weight: 500;
+          flex: none;
+        }
+        .ajrc-hub-bands-panel-sep {
+          color: rgba(255,255,255,0.5);
+          flex: none;
+        }
+        .ajrc-hub-bands-panel-desc {
+          color: rgba(255,255,255,0.9);
+        }
+        .ajrc-hub-bands-panel-note {
+          color: rgba(255,255,255,0.7);
+          font-size: 11px;
+          font-style: italic;
+          line-height: 1.4;
+          margin: 14px 0 0 0;
+        }
+        @media (min-width: 1024px) {
+          .ajrc-hub-bands-panel-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+            row-gap: 7px;
+          }
+        }
+      `}</style>
+
+
+      <main
+        style={{
+          width: "100%",
+          maxWidth: 1100,
+          margin: "0 auto",
+          padding: "clamp(24px, 4vw, 48px) clamp(20px, 3vw, 40px) 0",
+        }}
+      >
+
+        <Breadcrumbs
+          items={[
+            { name: "Home", path: "/" },
+            { name: "AI Job Risk", path: "/ai-job-risk" },
+          ]}
+          variant="dark"
+          style={{ marginBottom: 20 }}
+        />
+
+        <h1
+          className="ajrc-hub-h1"
+          style={{
+            fontFamily: DISPLAY,
+            fontWeight: 800,
+            lineHeight: 1.15,
+            letterSpacing: "-0.01em",
+            color: SOFT,
+          }}
+        >
+          AI Job Risk by Occupation
+        </h1>
+
+        <p
+          className="ajrc-hub-intro"
+          style={{
+            color: "rgba(250,250,248,0.9)",
+            maxWidth: 620,
+          }}
+        >
+
+          Task-level AI exposure scores for {cards.length} occupations, on a 0 to 100 scale. Each score weights an occupation's real work tasks from{" "}
+          <a
+            className="ajrc-hub-intro-link"
+            href="https://www.onetcenter.org/database.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            O*NET 30.2
+          </a>{" "}
+          against the exposure ratings in{" "}
+          <a
+            className="ajrc-hub-intro-link"
+            href="https://doi.org/10.1126/science.adj0998"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Eloundou et al. (2024, Science)
+          </a>
+          , with trajectory anchored to{" "}
+          <a
+            className="ajrc-hub-intro-link"
+            href="https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            METR (2025)
+          </a>
+          . Find your role and see where the work is actually changing.
+        </p>
+
+        <div className="ajrc-hub-stats">
+          <div className="ajrc-hub-stat">
+            <div className="ajrc-hub-stat-num">{stats.total}</div>
+            <div className="ajrc-hub-stat-label">occupations scored</div>
+          </div>
+          <div className="ajrc-hub-stat">
+            <div className="ajrc-hub-stat-num">{stats.median}</div>
+            <div className="ajrc-hub-stat-label">median score</div>
+          </div>
+          <div className="ajrc-hub-stat">
+            <div className="ajrc-hub-stat-num">{stats.highShare}%</div>
+            <div className="ajrc-hub-stat-label">score 50 or higher</div>
+          </div>
+        </div>
+
+
+
+
+        <label htmlFor="ajrc-hub-search" style={{ position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>
+          Search occupations
+        </label>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            width: "100%",
+            background: SOFT,
+            borderRadius: 9,
+            padding: "14px 16px",
+            marginBottom: 26,
+            boxSizing: "border-box",
+          }}
+        >
+
+          <Search size={16} color="#6B6B66" aria-hidden="true" />
+          <input
+            id="ajrc-hub-search"
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search occupations by title"
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck={false}
+            className="ajrc-hub-search-input"
+            style={{
+              flex: 1,
+              minWidth: 0,
+              padding: 0,
+              fontSize: 15,
+              fontFamily: SANS,
+              color: CHARCOAL,
+              background: "transparent",
+              border: "none",
+              outline: "none",
+            }}
+          />
+        </div>
+
+        {filterActive ? (
+          <p
+            style={{
+              color: "rgba(250,250,248,0.7)",
+              fontSize: 12,
+              margin: 0,
+              marginBottom: 16,
+            }}
+          >
+            Showing {matchCount} of {cards.length} occupations
+          </p>
+        ) : null}
+
+        {fieldChips.length > 0 ? (
+          <div style={{ marginBottom: 26 }}>
+
+            <div
+              style={{
+                color: "rgba(250,250,248,0.7)",
+                fontSize: 11,
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+                marginBottom: 9,
+              }}
+            >
+              Filter by field
+            </div>
+            <div
+              ref={chipsWrapRef}
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 6,
+                maxHeight: !effectiveExpanded && rowHeight ? rowHeight : undefined,
+                overflow: "hidden",
+              }}
+            >
+              <button
+                ref={(el) => { chipRefs.current[0] = el; }}
+                type="button"
+                onClick={() => setActiveField(null)}
+                className={`ajrc-hub-chip ${activeField === null ? "is-active" : ""}`}
+                aria-pressed={activeField === null}
+              >
+                All fields
+              </button>
+              {fieldChips.map((f, i) => (
+                <button
+                  key={f.code}
+                  ref={(el) => { chipRefs.current[i + 1] = el; }}
+                  type="button"
+                  onClick={() => setActiveField(f.code)}
+                  className={`ajrc-hub-chip ${activeField === f.code ? "is-active" : ""}`}
+                  aria-pressed={activeField === f.code}
+                >
+                  {f.label}
+                </button>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => setUserExpanded((v) => !v)}
+              className="ajrc-hub-chip"
+              aria-expanded={effectiveExpanded}
+              style={{ color: AMBER, marginTop: 8 }}
+            >
+              {effectiveExpanded ? "Fewer fields" : "More fields"}
+            </button>
+          </div>
+        ) : null}
+
+        {!filterActive ? (
+        <div className="ajrc-hub-bands-panel" aria-labelledby="ajrc-hub-bands-panel-heading">
+          <h2 id="ajrc-hub-bands-panel-heading" className="ajrc-hub-bands-panel-heading">
+            What the bands mean
+          </h2>
+          <div className="ajrc-hub-bands-panel-grid">
+            <div className="ajrc-hub-bands-panel-row">
+              <span
+                className="ajrc-hub-bands-panel-dot"
+                style={{ background: "#34A853" }}
+                aria-hidden="true"
+              />
+              <span className="ajrc-hub-bands-panel-label">Minimal 0–19</span>
+              <span className="ajrc-hub-bands-panel-sep">·</span>
+              <span className="ajrc-hub-bands-panel-desc">little exposure today</span>
+            </div>
+            <div className="ajrc-hub-bands-panel-row">
+              <span
+                className="ajrc-hub-bands-panel-dot"
+                style={{ background: "#7CB342" }}
+                aria-hidden="true"
+              />
+              <span className="ajrc-hub-bands-panel-label">Limited 20–39</span>
+              <span className="ajrc-hub-bands-panel-sep">·</span>
+              <span className="ajrc-hub-bands-panel-desc">a few tasks exposed</span>
+            </div>
+            <div className="ajrc-hub-bands-panel-row">
+              <span
+                className="ajrc-hub-bands-panel-dot"
+                style={{ background: "#F4B400" }}
+                aria-hidden="true"
+              />
+              <span className="ajrc-hub-bands-panel-label">Moderate 40–59</span>
+              <span className="ajrc-hub-bands-panel-sep">·</span>
+              <span className="ajrc-hub-bands-panel-desc">a meaningful share of tasks</span>
+            </div>
+            <div className="ajrc-hub-bands-panel-row">
+              <span
+                className="ajrc-hub-bands-panel-dot"
+                style={{ background: "#F57C00" }}
+                aria-hidden="true"
+              />
+              <span className="ajrc-hub-bands-panel-label">Significant 60–79</span>
+              <span className="ajrc-hub-bands-panel-sep">·</span>
+              <span className="ajrc-hub-bands-panel-desc">most tasks exposed</span>
+            </div>
+            <div className="ajrc-hub-bands-panel-row">
+              <span
+                className="ajrc-hub-bands-panel-dot"
+                style={{ background: "#EA4335" }}
+                aria-hidden="true"
+              />
+              <span className="ajrc-hub-bands-panel-label">Severe 80–95</span>
+              <span className="ajrc-hub-bands-panel-sep">·</span>
+              <span className="ajrc-hub-bands-panel-desc">nearly all tasks exposed</span>
+            </div>
+          </div>
+          <p className="ajrc-hub-bands-panel-note">Capped at 95. No job today runs with zero human input.</p>
+        </div>
+        ) : null}
+
+        {filterActive && matchCount === 0 ? (
+          <p
+            style={{
+              color: "rgba(255,255,255,0.9)",
+              fontSize: 15,
+              textAlign: "left",
+              margin: "0 0 16px 0",
+            }}
+          >
+            No occupations match that search.
+          </p>
+        ) : null}
+
+        {orderedGroups.length === 0 ? (
+          <p style={{ color: "rgba(250,250,248,0.9)" }}>No occupation pages are published yet.</p>
+        ) : (
+          <div className="ajrc-hub-bands">
+            {orderedGroups.map(({ band, rows }) => {
+              const visibleCount = matchSet
+                ? rows.filter((r) => matchSet.has(r.slug)).length
+                : rows.length;
+              const isExpanded = expandedBands.has(band);
+              const isCollapsed = !filterActive && !isExpanded;
+              const showControl = !filterActive && rows.length > 8;
+              const bandLower = band.toLowerCase();
+              return (
+                <section key={band} hidden={visibleCount === 0}>
+                  <h2 className="ajrc-hub-band-heading">
+                    <span className="ajrc-hub-band-name">{BAND_LABELS[band] ?? band}</span>
+                    <span className="ajrc-hub-band-count">
+                      {matchSet ? visibleCount : rows.length} occupations
+                    </span>
+                  </h2>
+
+                  <ul className={`ajrc-hub-row-list${isCollapsed ? " is-collapsed" : ""}`}>
+                    {rows.map((r, i) => renderCard(r, i === 0))}
+                  </ul>
+
+                  {showControl ? (
+                    <button
+                      type="button"
+                      className="ajrc-hub-showall"
+                      onClick={() => toggleBand(band)}
+                      aria-expanded={isExpanded}
+                    >
+                      {isExpanded
+                        ? "Show fewer"
+                        : `Show all ${rows.length} ${bandLower}-exposure occupations`}
+                      <span className={`ajrc-hub-showall-chev${isExpanded ? " is-open" : ""}`} aria-hidden="true">
+                        ▾
+                      </span>
+                    </button>
+                  ) : null}
+                </section>
+              );
+            })}
+          </div>
+        )}
+
+
+        <section className="ajrc-hub-faq" aria-labelledby="ajrc-hub-faq-heading">
+          <h2 id="ajrc-hub-faq-heading" className="ajrc-hub-faq-heading">
+            Questions people ask
+          </h2>
+          <dl className="ajrc-hub-faq-list">
+            <div className="ajrc-hub-faq-pair">
+              <dt className="ajrc-hub-faq-q">Which jobs are most at risk from AI?</dt>
+              <dd className="ajrc-hub-faq-a">
+                Blockchain engineers, court reporters, mathematicians, and proofreaders score 95, the highest on this index. Exposure is task-level, so the ranking reflects how much of the work AI can already do, not predicted job losses.{" "}
+                <Link to="/jobs-most-at-risk-from-ai" className="ajrc-hub-faq-link">
+                  See the full analysis
+                </Link>
+              </dd>
+            </div>
+            <div className="ajrc-hub-faq-pair">
+              <dt className="ajrc-hub-faq-q">Which jobs are safest from AI?</dt>
+              <dd className="ajrc-hub-faq-a">
+                Occupations in farming, food preparation, building maintenance, and the skilled trades cluster lowest. These roles depend on physical presence and situational judgment that current models cannot reach.
+              </dd>
+            </div>
+            <div className="ajrc-hub-faq-pair">
+              <dt className="ajrc-hub-faq-q">How is AI job risk measured?</dt>
+              <dd className="ajrc-hub-faq-a">
+                Each O*NET task carries an exposure value from Eloundou et al. (2024, Science), weighted by how much of a worker's time it takes.{" "}
+                <Link to="/how-it-works" className="ajrc-hub-faq-link">
+                  The formula is published
+                </Link>
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+      </main>
+
+      <section className="ajrc-hub-cta-band" aria-labelledby="ajrc-hub-cta-heading">
+        <div className="ajrc-hub-cta-inner">
+          <h2 id="ajrc-hub-cta-heading" className="ajrc-hub-cta-heading">
+            Your title is not your score.
+          </h2>
+          <p className="ajrc-hub-cta-sub">
+            These are occupation averages. Your own mix of tasks will score differently.
+          </p>
+          <Link to="/assessment" className="ajrc-hub-cta-btn">
+            Get my free score
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
